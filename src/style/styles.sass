@@ -1,0 +1,137 @@
+@import "bourbon"
+@import "neat"
+
+@import "fonts"
+@import "vars"
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	-webkit-font-smoothing: antialiased
+
+html
+	height: 100%
+
+body
+	padding: 0
+	min-width: 320px
+	margin: 0
+	overflow-x: hidden
+	font-weight: 400
+	width: 100%
+	height: 100%
+	font-size: 16px
+	font-family: Roboto, sans-serif
+	line-height: 1.5
+
+.container
+	max-width: 1170px
+	width: 100%
+	margin: 0 auto
+	&_flex
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+	&_jc
+		justify-content: space-between
+	&_fwn
+		flex-wrap: nowrap
+	&_fw
+		flex-wrap: wrap
+
+h1
+  text-align: center
+  padding: 20px 0
+  font-size: 30px
+nav
+  background-color: red
+  ul
+    display: flex
+    max-width: 1170px
+    width: 100%
+    justify-content: center
+    margin: 0 auto
+    list-style-type: none
+    li
+      flex-basis: (100/3)+0%
+      width: (100/3)+0%
+      text-align: center
+      a
+        color: #ffffff
+        font-size: 22px
+        font-weight: bold
+        display: block
+        padding: 10px 0
+        text-decoration: none
+        transition: all .25s
+        background-color: red
+        &:hover
+          background-color: darken(red ,5%)
+h2
+  text-align: center
+  padding-bottom: 20px
+  font-size: 25px
+  font-weight: 700
+h3
+  text-align: center
+.section
+  padding: 30px 0
+  &-grey
+    background-color: darken(#fff, 3%)
+.container-first
+  align-items: center
+  img
+    flex-basis: 45%
+  .firts__text
+    flex-basis: 50%
+    p
+      font-size: 20px
+      padding-bottom: 10px
+    ul
+      list-style-image: url("../img/snowflake.png")
+      list-style-position: inside
+      li
+        padding-bottom: 10px
+      span
+        position: relative
+        top: -10px
+        font-size: 18px
+.container-first
+  .text__skazka
+    p
+      font-size: 16px
+      padding-bottom: 6px
+      &:first-letter
+        padding-left: 20px
+    ul
+      list-style-image: none
+@media screen and (max-width: 968px)
+  .container-first
+    display: block
+    text-align: center
+    img
+      max-width: 400px
+      width: 100%
+      margin: 0 auto
+      padding-bottom: 20px
+  .container-first
+    .text__skazka
+      padding-left: 10px
+      padding-right: 10px
+      text-align: left
+  .container-second
+    img
+      padding-bottom: 0
+footer
+  background-color: red
+  text-align: center
+  padding: 10px 10px
+  color: #fff
+@media screen and (max-width: 768px)
+  nav
+    ul
+      display: block
+      li
+        width: 100%
+
